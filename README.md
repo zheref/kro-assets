@@ -30,6 +30,17 @@ the private product repos' PR descriptions.
 > images must be rendered from `#if DEBUG` / mock fixtures — **never** real
 > account/session data (data minimization).
 
+> **Permanent, one-way.** A push here is irreversible: deleting a file in a later
+> commit does **not** retract it — git history, forks, and clones persist it, and
+> any SHA-pinned URL keeps resolving. An accidental non-mock image is an
+> **incident** (rotate/notify), not a delete.
+
+## Retention
+
+Append-only. Merged/closed PRs' images are **not** pruned — old SHAs must keep
+resolving for historical PR descriptions, and the volume is negligible. No cleanup
+job by design.
+
 ## Layout
 
 ```
